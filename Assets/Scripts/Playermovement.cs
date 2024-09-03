@@ -13,7 +13,7 @@ public class Playermovement : MonoBehaviour
     private bool facingRight;
     private bool facingUp;
     [SerializeField] Vector2 targetPosition;
-    float lerpSpeed = 0.05f;
+    
 
 
     void Start()
@@ -23,8 +23,8 @@ public class Playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float blend = Mathf.Pow(0.5f, Time.deltaTime * lerpSpeed);
-        transform.position = Vector2.Lerp(targetPosition, transform.position, blend);
+        float blend = Mathf.Pow(0.5f, Time.deltaTime * moveSpeed);
+        
 
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");

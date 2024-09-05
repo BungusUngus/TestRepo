@@ -12,7 +12,6 @@ public class Playermovement : MonoBehaviour
     private Vector2 moveInput;
     private bool facingRight;
     private bool facingUp;
-    [SerializeField] Vector2 targetPosition;
     
 
 
